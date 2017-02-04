@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <meta charset="utf-8">
+            <title>Users</title>
+      </head>
+      <style>
+            input {
+                  display: inline-block;
+                  margin-right: 100px;
+            }
+      </style>
+      <body>
+            <h4>User Name</h4>
+            <h4>Action</h4>
+                  {% if users %}
+                        {% for users in users %}
+                              <p>{{ users.first_name }} {{ users.last_name }}</p>
+                        {% endfor %}
+                  {% endif %}
+      </body>
+</html>

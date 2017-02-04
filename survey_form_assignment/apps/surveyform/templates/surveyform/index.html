@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	{% load staticfiles %}
+</head>
+<body>
+	<div id="container">
+		<form action="/surveys/process" method="post">
+			{% csrf_token %}
+                  Your Name: <input type="text" name="your_name">
+                  <p>Dojo Location: <select name="location">
+                        <option value="San Jose">San Jose</option>
+                        <option value="Seattle">Seattle</option>
+                        </select>
+                  <p>Favorite Language: <select name="language">
+                        <option value="Python">Python</option>
+                        <option value="CSS">CSS</option>
+                        </select>
+                  <p>Comment (optional): <input type="text" name="comment">
+			<p><input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

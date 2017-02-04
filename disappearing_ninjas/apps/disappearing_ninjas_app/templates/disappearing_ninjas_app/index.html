@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Disappearing Ninjas</title>
+</head>
+<body>
+      {% load staticfiles %}
+            {% if not no %}
+            {% if image %}
+                  <img src="{% static image %}" alt="" />
+            {% else %}
+                  <img src="{% static 'images/donatello.gif' %}" alt="" />
+                  <img src="{% static 'images/leonardo.gif' %}" alt="" />
+                  <img src="{% static 'images/michelangelo.png' %}" alt="" />
+                  <img src="{% static 'images/raphael.png' %}" alt="" />
+            {% endif %}
+      {{image}}
+      {% else %}
+            <p>No ninjas here!</p>
+      {% endif %}
+      {# <img src="{% static 'images/rawr.jpg' %}" alt="" />#}
+</body>
+</html>
